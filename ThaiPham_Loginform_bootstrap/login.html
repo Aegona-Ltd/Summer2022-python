@@ -12,7 +12,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./login.css" />
-    <script src="./login.js"></script>
   </head>
   <body>
     <div class="container">
@@ -20,25 +19,39 @@
         <h1 class="maintitle mx-auto pt-5">Welcome Title</h1>
       </section>
       <div class="d-flex justify-content-center align-items-center mt-5">
-        <form class="w-50 border">
+        <form id="loginForm" class="w-50 border">
           <div class="m-3">
             <label for="userName" class="form-label">User Name</label>
-            <input type="text" class="form-control" id="userName" />
-            <div class="empty-email-feedback">Please enter your username.</div>
-            <div class="invalid-email-feedback">Please enter valid email.</div>
+            <input
+              type="text"
+              class="form-control"
+              name="uname"
+              id="userName"
+            />
+            <div class="empty-username-feedback text-danger">
+              Please enter your username.
+            </div>
+            <div class="invalid-username-feedback text-danger">
+              Please enter valid username.
+            </div>
           </div>
           <div class="m-3">
             <label for="userPassword" class="form-label">Password</label>
-            <input type="password" class="form-control" id="userPassword" />
-            <div class="empty-password-feedback">
-              Please enter your username.
+            <input
+              type="password"
+              class="form-control"
+              name="pwd"
+              id="userPassword"
+            />
+            <div class="empty-password-feedback text-danger">
+              Please enter your password.
             </div>
-            <div class="invalid-password-feedback">
-              Please enter valid email.
+            <div class="invalid-password-feedback text-danger">
+              Please enter valid password.
             </div>
           </div>
           <div class="m-3">
-            <button type="submit" id="login" class="btn btn-success w-100">Login</button>
+            <button id="loginbtn" class="btn btn-success w-100">Login</button>
           </div>
         </form>
       </div>
@@ -49,5 +62,6 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script src="./login.js"></script>
   </body>
 </html>

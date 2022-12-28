@@ -24,27 +24,43 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <link rel="stylesheet" href="./login.css"/>
-    <script src="./login.js"></script>
+    <link rel="stylesheet" href="./login.css" />
   </head>
   <body>
     <div class="ui container">
+      <section id="heading">
+        <h1 class="maintitle ">Welcome Title</h1>
+      </section>
       <div class="ui horizontal segments logincontainer">
         <div class="ui segment">
-          <form class="ui form">
+          <form class="ui form" id="loginForm">
             <div class="field">
               <label>Username</label>
-              <input type="text" name="userName" />
+              <input type="text" name="uname" />
+              <div class="empty-username-feedback negative">
+                Please enter your username.
+              </div>
+              <div class="invalid-username-feedback negative">
+                Please enter valid username.
+              </div>
             </div>
             <div class="field">
               <label>Password</label>
-              <input type="password" name="passWord" />
+              <input type="password" name="pwd" />
+              <div class="empty-password-feedback negative">
+                Please enter your password.
+              </div>
+              <div class="invalid-password-feedback negative">
+               Password must be more than 8 characters. <br>
+               Password must contain a special symbol : @,#,!...<br>
+               Password must contain a uppercase and a lower case character.<br>
+              </div>
             </div>
-            <button class="fluid ui green button" type="submit">Login</button>
-            <div class="ui error message"></div>
+            <button class="fluid ui green button" id="loginBtn">Login</button>
           </form>
         </div>
       </div>
     </div>
+    <script src="./login.js"></script>
   </body>
 </html>

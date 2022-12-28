@@ -4,5 +4,22 @@
 }
 
 .ui.container{
-    margin-top: 48px;
+    margin-top: 50px;
 }
+
+.negative{
+    color: red
+}
+
+#heading {
+    width: 600px;
+    margin: auto;
+    padding-bottom: 50px;
+  }
+  
+  .maintitle {
+      width: 400px;
+      font-size: 50px;
+      margin: auto;
+      text-align: center;
+    }

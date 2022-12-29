@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="./login.css" />
+  </head>
+  <body>
+    <div class="containner">
+      <div class="contact-us-container">
+        <div class="contact-us-section">
+          <div class="d-flex justify-content-around">
+            <div class="box-contact-form-area">
+              <div class="group-title-area">
+                <div class="icon-btn-area btn-danger">
+                  <a
+                    href="#"
+                    class="d-flex justify-content-center align-items-center"
+                    ><img src="./assets/logo-small.png" atl="aegona" /><span
+                      >CONTACT US</span
+                    >
+                  </a>
+                </div>
+                <div class="title-area">
+                  <h2>Send us a message</h2>
+                </div>
+              </div>
+              <div class="contact-form-area">
+                <form id="loginForm" class="border">
+                  <div class="m-3 position-relative item">
+                    <label for="userName" class="form-label">Full Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="uname"
+                      id="userName"
+                    />
+                    <!-- <div class="empty-username-feedback text-danger">
+                      Please enter your username.
+                    </div> -->
+                    <!-- <div class="invalid-username-feedback text-danger">
+                      Please enter valid username.
+                    </div> -->
+                  </div>
+
+                  <div class="m-3 position-relative item">
+                    <label for="userName" class="form-label"
+                      >Company Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="uname"
+                      id="userName"
+                    />
+                    <!-- <div class="empty-username-feedback text-danger">
+                      Please enter your Company Name.
+                    </div> -->
+                    <!-- <div class="invalid-username-feedback text-danger">
+                      Please enter valid username.
+                    </div> -->
+                  </div>
+
+                  <div class="m-3 position-relative item">
+                    <label for="userName" class="form-label"
+                      >Buiseness Phone</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="uname"
+                      id="userName"
+                    />
+                    <!-- <div class="empty-username-feedback text-danger">
+                      Please enter your Buiseness Phone.
+                    </div> -->
+                    <!-- <div class="invalid-username-feedback text-danger">
+                      Please enter valid username.
+                    </div> -->
+                  </div>
+                  <div class="m-3 position-relative item">
+                    <label for="userName" class="form-label">Email</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="uname"
+                      id="userName"
+                    />
+                    <!-- <div class="empty-username-feedback text-danger">
+                      Please enter your Email.
+                    </div> -->
+                    <!-- <div class="invalid-username-feedback text-danger">
+                      Please enter valid username.
+                    </div> -->
+                  </div>
+                  <div class="m-3 position-relative item">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea
+                      class="form-control"
+                      id="message"
+                      rows="3"
+                    ></textarea>
+                    <!-- <div class="empty-username-feedback text-danger">
+                      Please enter your Message.
+                    </div> -->
+                  </div>
+
+                  <div class="m-3 position-relative">
+                    <div id="aegona-recapcha">
+                      <div
+                        class="g-recaptcha"
+                        data-sitekey="6Le90ZUjAAAAAFpiWYrO31ETaTEcE1x877I5mCU3"
+                        data-theme="dark"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="m-3 field-wrapper">
+                    <button id="loginbtn" class="btn btn-success w-100">
+                      SEND MESSAGE
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="image-box-area">
+              <div class="logo-area">
+                <img src="./assets/logo.png" alt="aegona" />
+              </div>
+              <div class="group-content-area">
+                <div class="box-content-area">
+                  <div class="title-area">
+                    <h4>
+                      Aegona is an IT service company based in Ho Chi Minh city,
+                      VietNam. At Aegona we provide.
+                    </h4>
+                  </div>
+                  <ul class="description-area">
+                    <li>Software Development</li>
+                    <li>Software Testing</li>
+                    <li>
+                      Automation Testing and Software Maintenance services for
+                      North America, Japan, Singapore and VietNam.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="box-content-area">
+                  <div class="title-area">
+                    <h2>Information</h2>
+                  </div>
+                  <ul class="description-area">
+                    <li>
+                      <span>Address:</span>
+                      QTSC Building 9 Quang Trung Software City Tan Chanh Hiep
+                      Ward, District 12, Ho Chi Minh City, Viet Nam
+                    </li>
+                    <li>
+                      <span>Email:</span>
+                      <a href="mailto: contact@aegona.com"
+                        >contact@aegona.com</a
+                      >
+                    </li>
+                    <li>
+                      <span>Phone:</span>
+                      <a href="tel: 84 28 7109 2939">+84 28 7109 2939</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./login.js"></script>
+  </body>
+</html>

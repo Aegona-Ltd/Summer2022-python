@@ -36,87 +36,90 @@
               </div>
               <div class="contact-form-area">
                 <form
-                  id="loginForm"
+                  id="submitForm"
                   method="POST"
                   action="https://script.google.com/macros/s/AKfycbyH5XJJHhSFzrfBv9eAf920-9tUgQmer11z6bH9y62hXjj13lZbaN4DOkmQEHP_ei2EGQ/exec"
                   class="border"
                 >
                   <div class="m-3 position-relative item">
-                    <label for="userName" class="form-label">Full Name</label>
+                    <label for="fullName" class="form-label">Full Name</label>
                     <input
                       type="text"
                       class="form-control"
                       name="Full_Name"
-                      id="userName"
+                      id="fullName"
                     />
-                    <!-- <div class="empty-username-feedback text-danger">
-                      Please enter your username.
-                    </div> -->
-                    <!-- <div class="invalid-username-feedback text-danger">
-                      Please enter valid username.
+                    <div class="empty-fullname-feedback text-danger">
+                      Please enter your Full Name.
+                    </div>
+                    <!-- <div class="invalid-fullname-feedback text-danger">
+                      Please enter valid Full Name.
                     </div> -->
                   </div>
 
                   <div class="m-3 position-relative item">
-                    <label for="userName" class="form-label"
+                    <label for="companyName" class="form-label"
                       >Company Name</label
                     >
                     <input
                       type="text"
                       class="form-control"
                       name="Company_Name"
-                      id="userName"
+                      id="companyName"
                     />
-                    <!-- <div class="empty-username-feedback text-danger">
+                    <div class="empty-companyname-feedback text-danger">
                       Please enter your Company Name.
-                    </div> -->
-                    <!-- <div class="invalid-username-feedback text-danger">
-                      Please enter valid username.
+                    </div>
+                    <!-- <div class="invalid-companyname-feedback text-danger">
+                      Please enter valid Company Name.
                     </div> -->
                   </div>
 
                   <div class="m-3 position-relative item">
-                    <label for="userName" class="form-label"
+                    <label for="businessPhone" class="form-label"
                       >Buiseness Phone</label
                     >
                     <input
                       type="text"
                       class="form-control"
                       name="Business_Phone"
-                      id="userName"
+                      id="businessPhone"
                     />
-                    <!-- <div class="empty-username-feedback text-danger">
+                    <div class="empty-businessphone-feedback text-danger">
                       Please enter your Buiseness Phone.
-                    </div> -->
-                    <!-- <div class="invalid-username-feedback text-danger">
-                      Please enter valid username.
+                    </div>
+                    <!-- <div class="invalid-businessphone-feedback text-danger">
+                      Please enter valid Business Phone.
                     </div> -->
                   </div>
                   <div class="m-3 position-relative item">
-                    <label for="userName" class="form-label">Email</label>
+                    <label for="Email" class="form-label">Email</label>
                     <input
                       type="text"
                       class="form-control"
                       name="Email"
-                      id="userName"
+                      id="email"
                     />
-                    <!-- <div class="empty-username-feedback text-danger">
+                    <div class="empty-email-feedback text-danger">
                       Please enter your Email.
-                    </div> -->
-                    <!-- <div class="invalid-username-feedback text-danger">
-                      Please enter valid username.
-                    </div> -->
+                    </div>
+                    <div class="invalid-email-feedback text-danger">
+                      Please enter valid Email.
+                    </div>
                   </div>
                   <div class="m-3 position-relative item">
-                    <label for="message" class="form-label">Message</label>
+                    <label for="Message" class="form-label">Message</label>
                     <textarea
                       class="form-control"
                       id="message"
                       rows="3"
                       name="Message"
                     ></textarea>
-                    <!-- <div class="empty-username-feedback text-danger">
+                    <div class="empty-message-feedback text-danger">
                       Please enter your Message.
+                    </div>
+                    <!-- <div class="invalid-message-feedback text-danger">
+                      Please enter valid Message.
                     </div> -->
                   </div>
 
@@ -130,7 +133,7 @@
                     </div>
                   </div>
                   <div class="m-3 field-wrapper">
-                    <button id="loginbtn" class="btn btn-success w-100">
+                    <button id="submitbtn" class="btn btn-success w-100">
                       SEND MESSAGE
                     </button>
                   </div>

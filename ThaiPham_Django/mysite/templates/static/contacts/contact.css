@@ -1,0 +1,117 @@
+ul {
+  margin: 0;
+  padding-left: 30px;
+}
+
+.contact-us-container {
+  background: url(./assets/contact-us-bg.svg);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-position-x: 6%;
+  background-position-y: 2%;
+  background-size: auto;
+  padding: 75px 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.contact-us-section {
+  width: 1350px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+
+.item {
+  margin-bottom: 20px;
+  color: #565656;
+}
+
+.item input {
+  border: 1px solid #eaeaea;
+  height: 60px;
+}
+
+.box-contact-form-area {
+  width: 650px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.box-contact-form-area .title-area {
+  margin-bottom: 50px;
+}
+
+.box-contact-form-area .title-area h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 52px;
+  text-transform: uppercase;
+  color: #003363;
+}
+
+.icon-btn-area a {
+  background: #961e3c;
+  text-decoration: none;
+  color: white;
+  padding: 4px 20px;
+  width: fit-content;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 7px;
+}
+
+.icon-btn-area span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.icon-btn-area img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+#submitbtn {
+  background-color: #961e3c;
+}
+
+.image-box-area {
+  width: 650px;
+  padding-right: 15px;
+  background: url(./assets/contact-us-box-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 30px;
+  padding: 50px;
+}
+
+.box-content-area {
+  padding: 30px 0;
+}
+
+.box-content-area .title-area h4 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.box-content-area:first-child {
+  border-bottom: 1px solid #b7b7b7;
+}
+
+.group-content-area * {
+  color: white;
+}
+
+.description-area li {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+}

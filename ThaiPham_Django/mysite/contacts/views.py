@@ -12,7 +12,6 @@ import requests
 def index(request):
     return render(request, "contacts/contact.html")
 
-
 @csrf_exempt
 def postContact(request):
     # if this is a POST request we need to process the form data

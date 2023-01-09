@@ -6,6 +6,7 @@ from django.db.models import F
 # Create your views here.
 from .forms import ContactForm
 from django.views.decorators.csrf import csrf_exempt
+from django.views.generic import ListView
 import requests
 
 
@@ -57,23 +58,41 @@ def postContact(request):
         return render(request, "contacts/contact.html")
 
 
-def getContacts(request):
-    itemPerPage = 5
-    page = None
+# def getContacts(request):
+#     itemPerPage = 5
+#     page = None
    
-    if request.method == 'GET' and 'page' in request.GET:
-        page = int(request.GET["page"])
-    else:
-        page = 1   
+#     if request.method == 'GET' and 'page' in request.GET:
+#         page = int(request.GET["page"])
+#     else:
+#         page = 1   
           
-    offSet = (page - 1) * itemPerPage
-    contactList = Contact.objects.all().order_by('created_at')[offSet:offSet+itemPerPage]
-    totalContacts =  math.ceil(Contact.objects.all().count()/5)
-    print(totalContacts)
-    context = {"contactList": contactList, "total": range(totalContacts)}
+#     offSet = (page - 1) * itemPerPage
+#     contactList = Contact.objects.all().order_by('created_at')[offSet:offSet+itemPerPage]
+#     totalContacts =  math.ceil(Contact.objects.all().count()/5)
+#     print(totalContacts)
+#     context = {"contactList": contactList, "total": range(totalContacts)}
 
-    return render(request, "admins/admin.html", context)
+#     return render(request, "admins/admin.html", context)
 
+
+
+class ContactList(ListView):
+    model = Contact
+    template_name = "admins/admin.html"
+    context_object_name = 'contactList'
+    paginate_by = 5
+    
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get the context
+        context = super(ContactList, self).get_context_data(**kwargs)
+        totalContacts =  math.ceil(Contact.objects.all().count()/5)
+        # Create any data and add it to the context
+        context['total'] = range(totalContacts)
+ 
+        return context
+
+      
 
 def getContactsByMail(request):
     itemPerPage = 5

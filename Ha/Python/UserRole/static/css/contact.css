@@ -1,0 +1,21 @@
+body{
+    background-color: mintcream;
+}
+div[id="text"]{
+    color:white;
+    font-size: 18px;
+    margin-top: 10px;
+}
+div[id="a"]{
+    margin-top: 200px;
+}
+.button[id = "btn1"]{
+    background-color: #A52A2A;
+    color: aliceblue; 
+    margin-bottom: 15px;
+}
+.button[id = "btn2"]{
+    background-color: #A52A2A; 
+    color: aliceblue; 
+    width: 100%;
+}

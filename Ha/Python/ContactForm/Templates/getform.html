@@ -24,8 +24,7 @@
                   <th>Message</th>
                   <th>Created_At</th>
                   <th>Updated_At</th>
-                  <th>Update</th>
-                  <th>Delete</th>
+                  <th>Action</th>
               </tr>
           </thead>
           <tbody>
@@ -40,10 +39,8 @@
                   <td>{{contact.created_at}}</td>
                   <td>{{contact.updated_at}}</td>
                   <td>
-                      <a href="/update/{{contact.id}}">Update</a>    
-                  </td>
-                  <td>
-                      <a href="/delete/{{contact.id}}">Delete</a>
+                      <a href="{% url 'update' contact.id %}">Update</a><br>
+                      <a href="{% url 'delete' contact.id %}">Delete</a> 
                   </td>
                 </tr>
           {% endfor %}

@@ -4,7 +4,6 @@ from .models import Contact
 from datetime import datetime
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
-
 # Create your views here.
 
 def contact(request):
@@ -28,7 +27,7 @@ def read(request):
     contact_list = Contact.objects.all()
     paginator = Paginator(contact_list, 6) # Show 25 contacts mỗi page
 
-    page_number = request.GET.get("page_number")
+    page_number = request.GET.get("page")
     try:
         contacts = paginator.page(page_number)
     except PageNotAnInteger:
@@ -49,10 +48,12 @@ def update(request, pk):
     form = Contact.objects.get(id=pk)
     updateform = Form(instance=form)
     if request.method == 'POST':
+        form.created_at = datetime.now()
+        form.updated_at = datetime.now()
         updateform = Form(request.POST, instance=form)
         if updateform.is_valid():
             updateform.save()
-            return read(request)
+            return redirect('/')
     context = {
                 'id': pk,
                 'updateform': updateform,

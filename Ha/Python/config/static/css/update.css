@@ -1,0 +1,7 @@
+body{
+    background-color: mintcream;
+}
+form[id="update"]{
+    margin-top: 10px;
+    margin-left: 100px;
+}

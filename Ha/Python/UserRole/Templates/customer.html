@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js" integrity="sha512-Xo0Jh8MsOn72LGV8kU5LsclG7SUzJsWGhXbWcYs2MAmChkQzwiW/yTQwdJ8w6UA9C6EVG18GHb/TrYpYCjyAQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css" integrity="sha512-KXol4x3sVoO+8ZsWPFI/r5KBVB/ssCGB5tsv2nVOKwLg33wTFP3fmnXa47FdSVIshVTgsYk/1734xSk9aFIa4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Get data</title>
+    <link rel="stylesheet" href="{% static 'css/getform.css' %}">
+  </head>
+  <body>
+    <div id="app" class="ui container">
+      <h2 class="ui center aligned  header " > Contact form</h2>
+      <table class="ui center aligned celled table">
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Full Name</th>
+                  <th>Company Name</th>
+                  <th>Business Phone</th>
+                  <th>Email</th>
+                  <th>Message</th>
+                  <th>Created_At</th>
+                  <th>Updated_At</th>
+                  <th>Role</th>
+              </tr>
+          </thead>
+          <tbody>
+              {% for contact in contacts %}
+                <tr>
+                  <td>{{contact.id}}</td>
+                  <td>{{contact.fullname}}</td>
+                  <td>{{contact.companyname}}</td>
+                  <td>{{contact.businessphonne}}</td>
+                  <td>{{contact.email}}</td>
+                  <td>{{contact.message}}</td>
+                  <td>{{contact.created_at}}</td>
+                  <td>{{contact.updated_at}}</td>
+                  <td>{{contact.roleid.rolename}}</td>
+                </tr>
+          {% endfor %}
+          </tbody>
+      </table>
+    </div>
+  </body>
+ 
+</html>

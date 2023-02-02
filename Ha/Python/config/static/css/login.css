@@ -1,0 +1,21 @@
+body {
+    background-color: #DADADA;
+}
+body > .grid {
+    height: 100%;
+}
+.image {
+    margin-top: 500px;
+}
+.column {
+    max-width: 450px;
+}
+.content {
+    font-size: 30px;  
+    color: #33CCCC; 
+    text-align: center;
+}
+
+input[type=text]{
+    margin-top: 20px;
+}

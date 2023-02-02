@@ -1,5 +1,6 @@
 
 import json
+from django.http import HttpResponseRedirect
 from django.shortcuts import render,redirect
 from django import forms
 from .models import User,Role
@@ -16,14 +17,18 @@ def contact(request):
         companyname = request.POST.get('companyname')
         businessphonne = request.POST.get('businessphonne')
         email = request.POST.get('email')
+        if User.objects.get(email=email):
+            messages.info(request, 'Email đã tồn tại')
+            return redirect('contact')
         password = request.POST.get('password')
         message = request.POST.get('message')
         created_at = datetime.now()
         updated_at = datetime.now()
         roleid_id = 1
-        user_data = User(fullname=fullname, companyname=companyname, businessphonne=businessphonne, email=email, password=password, message=message,created_at=created_at, updated_at=updated_at,roleid_id = roleid_id)
+        user_data = User(username=fullname, companyname=companyname, businessphonne=businessphonne, email=email, password=password, message=message,created_at=created_at, updated_at=updated_at,roleid_id = roleid_id)
+        user_data.set_password(password)
         user_data.save()
-        return render(request, 'success.html')
+        return redirect('login')
     return render(request, 'contact.html')
 
 def read(request):
@@ -45,7 +50,7 @@ def read(request):
 class Form(forms.ModelForm):  
     class Meta:  
         model = User
-        fields = ['fullname', 'companyname', 'businessphonne', 'email', 'password', 'message', 'roleid']
+        fields = ['username', 'companyname', 'businessphonne', 'email', 'message', 'roleid']
         role = (
             ("staff","Staff"),
             ("customer","Customer"),
@@ -61,7 +66,7 @@ def update(request, pk):
         updateform = Form(request.POST, instance=form)
         if updateform.is_valid():
             updateform.save()
-            return redirect('/')
+            return redirect('admin')
     context = {
                 'id': pk,
                 'updateform': updateform,
@@ -77,18 +82,10 @@ def login_user(request):
     if request.method == 'POST':
         email = request.POST['email']
         password = request.POST['password']
-        roleid = int( request.POST['role'])
-        data = (email,password,roleid)
-        print(data)
-        user =User.objects.values_list('email','password','roleid')
-        print(user)
-        if data in user:
-            if 3 in data:
-                return redirect('admin')   
-            elif 2 in data:
-                return render(request, 'staff.html')
-            else:
-                return render(request, 'customer.html')
+        user = authenticate(request, email=email, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('admin')   
         else:
             messages.info(request, 'Invalid Email or Password')
             return redirect('login')
